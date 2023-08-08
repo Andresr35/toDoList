@@ -1,3 +1,21 @@
+:root{
+    --primaryColor:whitesmoke;
+    --secondayColor:rgb(146, 156, 146);
+}
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: red;
+    display: flex;
+    /* Going to try to work with flex this time */
+}
+nav{
+
+    width: 30vw;
+    height: 100vh;
+    background-color: var(--secondayColor);
+}
+main{
+    width: 70vw;
+    background-color: var(--primaryColor);
 }
