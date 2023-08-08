@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "To Do List project to bring all javascript concepts learned together.",
   "main": "index.js",
-  "private":true,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"webpack server --open",
-    "build":"webpack"
+    "start": "webpack server --open",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",

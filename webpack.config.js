@@ -16,6 +16,13 @@ module.exports = {
         use: ["html-loader"]
       },
       {
+        test: /\.css$/,
+        use: [
+            "style-loader", //2. Inject styles into DOM
+            "css-loader", //1. Turns css into commonjs
+        ]
+        },
+      {
         test: /\.(svg|png|jpg|gif)$/,
         use: {
           loader: "file-loader",
@@ -41,8 +48,8 @@ module.exports = {
   },
   plugins:[
     new HtmlWebpackPlugin({
-        title:'To Do List',
-        template:'./src/index.html'
+        // title:'To Do List',
+        template:"./src/index.html",
     }),
   ],
   output: {
@@ -50,8 +57,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean:true,
   },
-  optimization:{
-    runtimeChunk:'single',
-  },
+//   optimization:{
+//     runtimeChunk:'single',
+//   },
 
 };
