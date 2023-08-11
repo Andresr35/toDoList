@@ -11,14 +11,16 @@ body{
 }
 nav{
     padding: 3% 3%;
-    width: 30vw;
+    width: 40vw;
     height: 100vh;
     background-color: var(--secondayColor);
+    position: relative;
 }
 main{
-    width: 70vw;
+    width: 60vw;
     background-color: var(--primaryColor);
     padding: 3% 2%;
+    position: relative;
 }
 .lists>div{
     background-color: var(--primaryColor);
@@ -38,4 +40,42 @@ main{
 .lists>div:last-child{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.lists>div.defaultList{
+    background-color: var(--secondayColor);
+    border: 1px solid var(--primaryColor);
+}
+.addList{
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+position: absolute;
+bottom: 10px;
+right: 10px;
+}
+.addReminder{
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: var(--secondayColor);
+border-radius: 10px;
+}
+.categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.categories>div{
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    text-align: center;
+}
+.searchBar{
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+
+}
+.searchBar >p{
+    padding-left: 20px;
 }
