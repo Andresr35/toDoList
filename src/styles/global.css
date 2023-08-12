@@ -1,81 +1,82 @@
-:root{
-    --primaryColor:whitesmoke;
-    --secondayColor:rgb(146, 156, 146);
+:root {
+  --primaryColor: whitesmoke;
+  --secondayColor: rgb(146, 156, 146);
 }
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    /* Going to try to work with flex this time */
+body {
+  display: flex;
+  /* Going to try to work with flex this time */
 }
-nav{
-    padding: 3% 3%;
-    width: 40vw;
-    height: 100vh;
-    background-color: var(--secondayColor);
-    position: relative;
+nav {
+  padding: 3% 3%;
+  width: 40vw;
+  height: 100vh;
+  background-color: var(--secondayColor);
+  position: relative;
 }
-main{
-    width: 60vw;
-    background-color: var(--primaryColor);
-    padding: 3% 2%;
-    position: relative;
+main {
+  width: 60vw;
+  background-color: var(--primaryColor);
+  padding: 3% 2%;
+  position: relative;
 }
-.lists>div{
-    background-color: var(--primaryColor);
-    margin: auto;
-    text-align: center;
-    padding: 5px 0;
+.lists > div {
+  background-color: var(--primaryColor);
+  margin: auto;
+  text-align: center;
+  padding: 5px 0;
 }
-.lists>div>div{
-    display: inline;
-    float: right;
-    padding-right: 10%;
+.lists > div > div {
+  display: inline;
+  padding-right: 10%;
 }
-.lists>div:first-child{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.lists > div:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.lists>div:last-child{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.lists > div:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.lists>div.defaultList{
-    background-color: var(--secondayColor);
-    border: 1px solid var(--primaryColor);
+.lists > div.defaultList {
+  background-color: var(--secondayColor);
+  border: 1px solid var(--primaryColor);
 }
-.addList{
-    background-color: var(--primaryColor);
-    border-radius: 10px;
-position: absolute;
-bottom: 10px;
-right: 10px;
+.addList {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
-.addReminder{
-position: absolute;
-top: 10px;
-right: 10px;
-background-color: var(--secondayColor);
-border-radius: 10px;
+.addReminder {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--secondayColor);
+  border-radius: 10px;
 }
-.categories{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
 }
-.categories>div{
-    background-color: var(--primaryColor);
-    border-radius: 10px;
-    text-align: center;
+.categories > div {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  text-align: center;
 }
-.searchBar{
-    background-color: var(--primaryColor);
-    border-radius: 10px;
-
+.searchBar {
+  background-color: var(--primaryColor);
+  border-radius: 10px;
 }
-.searchBar >p{
-    padding-left: 20px;
+.searchBar > p {
+  padding-left: 20px;
+}
+.title {
+  text-align: center;
 }
