@@ -10,21 +10,15 @@ const addReminder = document.querySelector(".addReminder");
 const main = document.querySelector("main");
 
 const lists = [];
+let currentList = List("Default");
 
-addList.addEventListener("click", () => {
-  main.appendChild(addListForm); // add create list form to page
-  addListForm.addEventListener(
-    "submit",
-    (event) => {
-      event.preventDefault(); // Stop page from refreshing
-      const name = event.target[0].value;
-      addToList(List(name));
-      addListForm.reset();
-      addListForm.remove();
-    },
-    { once: true }
-  );
-});
+const setDefaultList = (list) => {
+  currentList.removeDefault();
+  currentList.removeReminders();
+  currentList = list;
+  list.makeDefault();
+  list.renderReminders();
+};
 
 /**
  * This adds a list item to the array of lists and pushes it to the DOM
@@ -39,6 +33,21 @@ const addToList = (list) => {
     setDefaultList(list);
   });
 };
+
+addList.addEventListener("click", () => {
+  main.appendChild(addListForm); // add csreate list form to page
+  addListForm.addEventListener(
+    "submit",
+    (event) => {
+      event.preventDefault(); // Stop page from refreshing
+      const name = event.target[0].value;
+      addToList(List(name));
+      addListForm.reset();
+      addListForm.remove();
+    },
+    { once: true }
+  );
+});
 
 addReminder.addEventListener("click", () => {
   main.appendChild(addReminderForm);
@@ -56,14 +65,5 @@ addReminder.addEventListener("click", () => {
   );
 });
 
-const setDefaultList = (list) => {
-  currentList.removeDefault();
-  currentList.removeReminders();
-  currentList = list;
-  list.makeDefault();
-  list.renderReminders();
-};
-
-let currentList = List("Default");
 addToList(currentList);
 setDefaultList(currentList);
